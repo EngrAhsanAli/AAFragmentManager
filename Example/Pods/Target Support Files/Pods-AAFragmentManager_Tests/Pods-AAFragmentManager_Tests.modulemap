@@ -1,6 +1,0 @@
-framework module Pods_AAFragmentManager_Tests {
-  umbrella header "Pods-AAFragmentManager_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
