@@ -1,0 +1,6 @@
+framework module AAFragmentManager {
+  umbrella header "AAFragmentManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
