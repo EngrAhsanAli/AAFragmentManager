@@ -2,18 +2,18 @@
 # Table of Contents
 
 - [AAFragmentManager](#section-id-5)
-  - [Description](#section-id-12)
-  - [Demonstration](#section-id-17)
-  - [Requirements](#section-id-27)
+- [Description](#section-id-12)
+- [Demonstration](#section-id-17)
+- [Requirements](#section-id-27)
 - [Installation](#section-id-33)
-  - [CocoaPods](#section-id-39)
-  - [Carthage](#section-id-65)
-  - [Manual Installation](#section-id-83)
+- [CocoaPods](#section-id-39)
+- [Carthage](#section-id-65)
+- [Manual Installation](#section-id-83)
 - [Getting Started](#section-id-87)
-  - [Create your fragment manager](#section-id-90)
-  - [Setup your child views](#section-id-101)
-  - [Get any child views controller](#section-id-112)
-  - [Switching between child views](#section-id-123)
+- [Create your fragment manager](#section-id-90)
+- [Setup your child views](#section-id-101)
+- [Get any child views controller](#section-id-112)
+- [Switching between child views](#section-id-123)
 - [Contributions & License](#section-id-142)
 
 
@@ -140,6 +140,7 @@ Create a `UIView` and set the class as `AAFragmentManager`. Make an `IBOutlet` o
 Now create child views (fragments) using single line
 
 ```ruby
+childView.allowSameFragment = true
 childView.setupFragments(arrayVC, defaultIndex: 0)
 ```
 
@@ -166,15 +167,20 @@ demoFragment.delegate = self // sets for some callback
 You can switch child view controllers using the single line
 
 ```ruby
+// replace fragment by index
 childView.replaceFragment(index: 1)
+// replace with next fragment
+childView.previousFragment()
+// replace with previous fragment
+childView.nextFragment()
 ```
 
-> Note that replaceFragment has optional parameters `shouldAnimate` , `shouldFit`,  `allowSameFragment`.
+> Note that replaceFragment has optional parameters `shouldAnimate` , `shouldFit`.
 
 Here's the method signature
 
 ```ruby
-open func replaceFragment(index: Int, shouldAnimate animate: Bool = true, shouldFit fit: Bool = true, allowSameFragment sameFragment: Bool = false)
+open func replaceFragment(index: Int, shouldAnimate animate: Bool = true, shouldFit fit: Bool = true)
 ```
 
 > By default, `shouldFit` is true such that it will make fragment of same height as its parent view and vice versa. 
