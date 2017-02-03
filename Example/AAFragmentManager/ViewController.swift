@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         
         childView.setupFragments(arrayVC, defaultIndex: 0)
 
+        let fragment1 = childView.getFragment(0) as! Fragment1
+        fragment1.parentVC = self
         
     }
     

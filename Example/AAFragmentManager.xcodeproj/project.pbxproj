@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420FBB9C1E44D0EB00584996 /* Fragment1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FBB9B1E44D0EB00584996 /* Fragment1.swift */; };
+		420FBB9E1E44D0F400584996 /* Fragment2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FBB9D1E44D0F400584996 /* Fragment2.swift */; };
+		420FBBA01E44D0FD00584996 /* Fragment3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FBB9F1E44D0FD00584996 /* Fragment3.swift */; };
+		420FBBA21E44D10500584996 /* Fragment4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FBBA11E44D10500584996 /* Fragment4.swift */; };
+		420FBBA41E44D10E00584996 /* Fragment5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FBBA31E44D10E00584996 /* Fragment5.swift */; };
 		5445BF3E3A7A415C9BFB87F2 /* Pods_AAFragmentManager_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB50673D831670256CB5847 /* Pods_AAFragmentManager_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -20,6 +25,11 @@
 		0B7A2C420E24B1910DDDC6A1 /* Pods-AAFragmentManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AAFragmentManager_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AAFragmentManager_Tests/Pods-AAFragmentManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		175EEE8A5D3AE3307AE77B5D /* Pods_AAFragmentManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AAFragmentManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17ECF08419A447444BAA1E8A /* Pods-AAFragmentManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AAFragmentManager_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AAFragmentManager_Tests/Pods-AAFragmentManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		420FBB9B1E44D0EB00584996 /* Fragment1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fragment1.swift; sourceTree = "<group>"; };
+		420FBB9D1E44D0F400584996 /* Fragment2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fragment2.swift; sourceTree = "<group>"; };
+		420FBB9F1E44D0FD00584996 /* Fragment3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fragment3.swift; sourceTree = "<group>"; };
+		420FBBA11E44D10500584996 /* Fragment4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fragment4.swift; sourceTree = "<group>"; };
+		420FBBA31E44D10E00584996 /* Fragment5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fragment5.swift; sourceTree = "<group>"; };
 		49E7ACB03D280759475FA727 /* Pods-AAFragmentManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AAFragmentManager_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AAFragmentManager_Example/Pods-AAFragmentManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5FB50673D831670256CB5847 /* Pods_AAFragmentManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AAFragmentManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* AAFragmentManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AAFragmentManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +91,11 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				420FBB9B1E44D0EB00584996 /* Fragment1.swift */,
+				420FBB9D1E44D0F400584996 /* Fragment2.swift */,
+				420FBB9F1E44D0FD00584996 /* Fragment3.swift */,
+				420FBBA11E44D10500584996 /* Fragment4.swift */,
+				420FBBA31E44D10E00584996 /* Fragment5.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -241,7 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420FBB9E1E44D0F400584996 /* Fragment2.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				420FBBA21E44D10500584996 /* Fragment4.swift in Sources */,
+				420FBB9C1E44D0EB00584996 /* Fragment1.swift in Sources */,
+				420FBBA01E44D0FD00584996 /* Fragment3.swift in Sources */,
+				420FBBA41E44D10E00584996 /* Fragment5.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

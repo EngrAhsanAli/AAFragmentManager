@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1113.75" y="122.53521126760563"/>
         </scene>
-        <!--View Controller-->
+        <!--Fragment1-->
         <scene sceneID="r9k-6I-ffd">
             <objects>
-                <viewController storyboardIdentifier="ChlidVC1" id="pji-BL-GDh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChlidVC1" id="pji-BL-GDh" customClass="Fragment1" customModule="AAFragmentManager_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hwf-YH-1Gn"/>
                         <viewControllerLayoutGuide type="bottom" id="HgL-EX-rdV"/>
@@ -92,29 +92,45 @@
                                 <rect key="frame" x="0.0" y="558" width="320" height="10"/>
                                 <color key="backgroundColor" red="0.56493480969999998" green="0.57103263420000006" blue="0.52149691210000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="0sk-eO-RP8"/>
+                                    <constraint firstAttribute="height" constant="10" id="e44-78-tYc"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHd-34-M11">
+                                <rect key="frame" x="16" y="297" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="V6J-fT-1t0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="30"/>
+                                <state key="normal" title="Click!">
+                                    <color key="titleColor" red="0.69504089199999997" green="0.34829119710000001" blue="0.393651584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickAction:" destination="pji-BL-GDh" eventType="touchUpInside" id="rBX-BA-pMC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.82008928336180986" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="hbk-yF-quM" secondAttribute="trailing" id="LC7-Nu-DjY"/>
-                            <constraint firstItem="hbk-yF-quM" firstAttribute="leading" secondItem="thc-N9-jGz" secondAttribute="leading" id="Lo7-G7-OGk"/>
-                            <constraint firstItem="hbk-yF-quM" firstAttribute="bottom" secondItem="HgL-EX-rdV" secondAttribute="top" id="ZDL-R0-Rkr"/>
-                            <constraint firstItem="cCo-w4-PJE" firstAttribute="leading" secondItem="thc-N9-jGz" secondAttribute="leadingMargin" id="tk9-g8-NQD"/>
-                            <constraint firstItem="cCo-w4-PJE" firstAttribute="top" secondItem="hwf-YH-1Gn" secondAttribute="bottom" constant="187" id="uLg-Gj-kJt"/>
-                            <constraint firstItem="cCo-w4-PJE" firstAttribute="centerX" secondItem="hbk-yF-quM" secondAttribute="centerX" id="vNV-wP-7GY"/>
+                            <constraint firstItem="cCo-w4-PJE" firstAttribute="top" secondItem="hwf-YH-1Gn" secondAttribute="bottom" constant="187" id="0oc-Cw-JCg"/>
+                            <constraint firstItem="cCo-w4-PJE" firstAttribute="leading" secondItem="thc-N9-jGz" secondAttribute="leadingMargin" id="90i-aY-XkH"/>
+                            <constraint firstItem="cCo-w4-PJE" firstAttribute="trailing" secondItem="RHd-34-M11" secondAttribute="trailing" id="G2l-Cw-hg3"/>
+                            <constraint firstItem="RHd-34-M11" firstAttribute="centerX" secondItem="hbk-yF-quM" secondAttribute="centerX" id="GgP-Mu-zmL"/>
+                            <constraint firstItem="RHd-34-M11" firstAttribute="top" secondItem="cCo-w4-PJE" secondAttribute="bottom" constant="55" id="eai-Tm-edm"/>
+                            <constraint firstItem="hbk-yF-quM" firstAttribute="bottom" secondItem="HgL-EX-rdV" secondAttribute="top" id="n2J-zB-Rqy"/>
+                            <constraint firstAttribute="trailing" secondItem="hbk-yF-quM" secondAttribute="trailing" id="qm9-Re-00y"/>
+                            <constraint firstItem="hbk-yF-quM" firstAttribute="leading" secondItem="thc-N9-jGz" secondAttribute="leading" id="sCc-65-nzz"/>
+                            <constraint firstItem="cCo-w4-PJE" firstAttribute="leading" secondItem="RHd-34-M11" secondAttribute="leading" id="xgt-Qg-aY9"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xd-O5-CVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="123"/>
+            <point key="canvasLocation" x="1901.25" y="122.53521126760563"/>
         </scene>
-        <!--View Controller-->
+        <!--Fragment2-->
         <scene sceneID="bCm-xF-f8x">
             <objects>
-                <viewController storyboardIdentifier="ChlidVC2" id="qpa-cQ-H9T" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChlidVC2" id="qpa-cQ-H9T" customClass="Fragment2" customModule="AAFragmentManager_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RlS-br-hlG"/>
                         <viewControllerLayoutGuide type="bottom" id="vFu-0c-3dB"/>
@@ -144,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="2513" y="185"/>
         </scene>
-        <!--View Controller-->
+        <!--Fragment3-->
         <scene sceneID="rKM-Gf-LOv">
             <objects>
-                <viewController storyboardIdentifier="ChlidVC3" id="Ob8-UE-bUX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChlidVC3" id="Ob8-UE-bUX" customClass="Fragment3" customModule="AAFragmentManager_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lNz-U6-OMm"/>
                         <viewControllerLayoutGuide type="bottom" id="2Tn-Kr-g4I"/>
@@ -177,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="3133" y="184"/>
         </scene>
-        <!--View Controller-->
+        <!--Fragment4-->
         <scene sceneID="3mK-qf-vUM">
             <objects>
-                <viewController storyboardIdentifier="ChlidVC4" id="SBG-Ch-Ykb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChlidVC4" id="SBG-Ch-Ykb" customClass="Fragment4" customModule="AAFragmentManager_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RYv-Vo-p9X"/>
                         <viewControllerLayoutGuide type="bottom" id="Pxu-us-RwU"/>
@@ -210,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="3774" y="185"/>
         </scene>
-        <!--View Controller-->
+        <!--Fragment5-->
         <scene sceneID="KbW-RW-C4V">
             <objects>
-                <viewController storyboardIdentifier="ChlidVC5" id="wk7-zH-NYp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChlidVC5" id="wk7-zH-NYp" customClass="Fragment5" customModule="AAFragmentManager_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lcf-sk-rBv"/>
                         <viewControllerLayoutGuide type="bottom" id="QfZ-ix-lIA"/>
