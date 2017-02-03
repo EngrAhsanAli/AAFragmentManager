@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'AAFragmentManager'
-s.version          = '0.1.0'
+s.version          = '0.1.1'
 s.summary          = 'AAFragmentManager is a child view manager responsible to add child subviews in UIView and easy switching between them, written in Swift.'
 
 s.description      = <<-DESC
