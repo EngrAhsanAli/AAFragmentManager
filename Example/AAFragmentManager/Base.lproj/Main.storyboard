@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e0F-pn-xGX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e0F-pn-xGX">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,7 +50,18 @@
                             <constraint firstItem="eKK-DO-4lc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="18" id="yeG-kh-URq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Demo AAFragmentManager" id="Pq9-bj-tUB"/>
+                    <navigationItem key="navigationItem" title="Demo AAFragmentManager" id="Pq9-bj-tUB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="af0-Og-fn0">
+                            <connections>
+                                <action selector="previousAction:" destination="vXZ-lx-hvc" id="CH8-pT-v2H"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Wp3-Ya-8lV">
+                            <connections>
+                                <action selector="nextAction:" destination="vXZ-lx-hvc" id="AJU-CS-hUb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="childView" destination="YnX-AW-kHr" id="42G-AF-baQ"/>
                     </connections>
@@ -68,29 +79,37 @@
                         <viewControllerLayoutGuide type="bottom" id="HgL-EX-rdV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="thc-N9-jGz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fragment # 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCo-w4-PJE">
-                                <rect key="frame" x="16" y="208" width="288" height="35"/>
+                                <rect key="frame" x="16" y="207" width="288" height="35"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbk-yF-quM">
+                                <rect key="frame" x="0.0" y="558" width="320" height="10"/>
+                                <color key="backgroundColor" red="0.56493480969999998" green="0.57103263420000006" blue="0.52149691210000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="0sk-eO-RP8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.82008928336180986" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cCo-w4-PJE" firstAttribute="leading" secondItem="thc-N9-jGz" secondAttribute="leadingMargin" id="7Gl-iC-M79"/>
-                            <constraint firstItem="cCo-w4-PJE" firstAttribute="trailing" secondItem="thc-N9-jGz" secondAttribute="trailingMargin" id="BH8-Jd-MqU"/>
-                            <constraint firstItem="cCo-w4-PJE" firstAttribute="top" secondItem="hwf-YH-1Gn" secondAttribute="bottom" constant="188" id="Go2-De-IIe"/>
+                            <constraint firstAttribute="trailing" secondItem="hbk-yF-quM" secondAttribute="trailing" id="LC7-Nu-DjY"/>
+                            <constraint firstItem="hbk-yF-quM" firstAttribute="leading" secondItem="thc-N9-jGz" secondAttribute="leading" id="Lo7-G7-OGk"/>
+                            <constraint firstItem="hbk-yF-quM" firstAttribute="bottom" secondItem="HgL-EX-rdV" secondAttribute="top" id="ZDL-R0-Rkr"/>
+                            <constraint firstItem="cCo-w4-PJE" firstAttribute="leading" secondItem="thc-N9-jGz" secondAttribute="leadingMargin" id="tk9-g8-NQD"/>
+                            <constraint firstItem="cCo-w4-PJE" firstAttribute="top" secondItem="hwf-YH-1Gn" secondAttribute="bottom" constant="187" id="uLg-Gj-kJt"/>
+                            <constraint firstItem="cCo-w4-PJE" firstAttribute="centerX" secondItem="hbk-yF-quM" secondAttribute="centerX" id="vNV-wP-7GY"/>
                         </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="450"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xd-O5-CVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865.625" y="184.85915492957747"/>
+            <point key="canvasLocation" x="1903" y="123"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bCm-xF-f8x">

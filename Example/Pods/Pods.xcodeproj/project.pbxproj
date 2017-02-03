@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38B1F859343383CCD445D5950F26C382 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		420FBB9A1E44C56000584996 /* AAFragmentManager+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FBB991E44C56000584996 /* AAFragmentManager+Helper.swift */; };
 		4263B77A1E1C42A700C00BE3 /* AAFragmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4263B7791E1C42A700C00BE3 /* AAFragmentManager.swift */; };
 		473053320440B415ED41CDC8AAAAF225 /* AAFragmentManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0B17DD736DCAAAFB7B992384F6E7B3 /* AAFragmentManager-dummy.m */; };
 		60B242550F9545EF23CC42F8910C032F /* Pods-AAFragmentManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6726D055FA0A09C83AFFB028D530F480 /* Pods-AAFragmentManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +33,7 @@
 		2DDD32FCF8B28628AE1B0E3CCAF523D7 /* Pods-AAFragmentManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AAFragmentManager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		300F500F0EA20FF4DCCAC82D3576065F /* AAFragmentManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AAFragmentManager-prefix.pch"; sourceTree = "<group>"; };
 		3EF0D5C4956CE0D1117F8CC8BE1CC0AB /* AAFragmentManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AAFragmentManager.modulemap; sourceTree = "<group>"; };
+		420FBB991E44C56000584996 /* AAFragmentManager+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AAFragmentManager+Helper.swift"; sourceTree = "<group>"; };
 		4263B7791E1C42A700C00BE3 /* AAFragmentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAFragmentManager.swift; sourceTree = "<group>"; };
 		4C8167E303092CF0F161CC004F0C24EC /* AAFragmentManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AAFragmentManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0B17DD736DCAAAFB7B992384F6E7B3 /* AAFragmentManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AAFragmentManager-dummy.m"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4263B7791E1C42A700C00BE3 /* AAFragmentManager.swift */,
+				420FBB991E44C56000584996 /* AAFragmentManager+Helper.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				473053320440B415ED41CDC8AAAAF225 /* AAFragmentManager-dummy.m in Sources */,
 				4263B77A1E1C42A700C00BE3 /* AAFragmentManager.swift in Sources */,
+				420FBB9A1E44C56000584996 /* AAFragmentManager+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

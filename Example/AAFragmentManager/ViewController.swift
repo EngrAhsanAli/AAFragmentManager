@@ -41,7 +41,16 @@ class ViewController: UIViewController {
 
     @IBAction func replaceViewAction(_ sender: UISegmentedControl) {
         let index = sender.selectedSegmentIndex
-        childView.replaceFragment(index: index)
+        childView.replaceFragment(withIndex: index)
     }
+    
+    @IBAction func previousAction(_ sender: Any) {
+        childView.previousFragment()
+    }
+    
+    @IBAction func nextAction(_ sender: Any) {
+        childView.nextFragment()
+    }
+    
 }
 
