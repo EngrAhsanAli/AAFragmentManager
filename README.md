@@ -105,7 +105,7 @@ github "EngrAhsanAli/AAFragmentManager" "master"
 ```
 
 Then import the library in all files where you use it:
-```ruby
+```swift
 import AAFragmentManager
 ```
 
@@ -139,7 +139,7 @@ Create a `UIView` and set the class as `AAFragmentManager`. Make an `IBOutlet` o
 
 Now create child views (fragments) using single line
 
-```ruby
+```swift
 childView.allowSameFragment = true
 childView.setupFragments(arrayVC, defaultIndex: 0)
 ```
@@ -153,7 +153,7 @@ childView.setupFragments(arrayVC, defaultIndex: 0)
 
 You can get any child view controller by accessing it through index
 
-```ruby
+```swift
 let demoFragment = childView.getFragment(0)
 demoFragment.delegate = self // sets for some callback
 ```
@@ -166,7 +166,7 @@ demoFragment.delegate = self // sets for some callback
 
 You can switch child view controllers using the single line
 
-```ruby
+```swift
 // replace fragment by index
 childView.replaceFragment(index: 1)
 // replace with next fragment
@@ -179,7 +179,7 @@ childView.nextFragment()
 
 Here's the method signature
 
-```ruby
+```swift
 open func replaceFragment(index: Int, shouldAnimate animate: Bool = true, shouldFit fit: Bool = true)
 ```
 
