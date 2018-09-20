@@ -21,7 +21,7 @@
 
 #AAFragmentManager
 
-[![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods](https://img.shields.io/cocoapods/v/AAFragmentManager.svg)](http://cocoadocs.org/docsets/AAFragmentManager) [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/EngrAhsanAli/AAFragmentManager.svg?branch=master)](https://travis-ci.org/EngrAhsanAli/AAFragmentManager) 
+[![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods](https://img.shields.io/cocoapods/v/AAFragmentManager.svg)](http://cocoadocs.org/docsets/AAFragmentManager) [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/EngrAhsanAli/AAFragmentManager.svg?branch=master)](https://travis-ci.org/EngrAhsanAli/AAFragmentManager) 
 ![License MIT](https://img.shields.io/github/license/mashape/apistatus.svg) [![CocoaPods](https://img.shields.io/cocoapods/p/AAFragmentManager.svg)]()
 
 
@@ -36,8 +36,6 @@ AAFragmentManager is a child view manager responsible to add child subviews in U
 <div id='section-id-17'/>
 
 ##Demonstration
-
-
 
 ![](https://github.com/EngrAhsanAli/AAFragmentManager/blob/master/Screenshots/demo.gif)
 
@@ -60,7 +58,6 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 `AAFragmentManager` can be installed using CocoaPods, Carthage, or manually.
 
 
-
 <div id='section-id-39'/>
 
 ##CocoaPods
@@ -77,7 +74,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-pod 'AAFragmentManager', '~> 0.1.1'
+pod 'AAFragmentManager', '~> 2.0'
 end
 
 ```
@@ -128,6 +125,11 @@ Create a `UIView` and set the class as `AAFragmentManager`. Make an `IBOutlet` o
 
 ```ruby
 @IBOutlet weak var childView: AAFragmentManager!
+
+// Customize the replace animations with the instance
+childView.nextTransition = kCATransitionFromTop
+childView.prevTransition = kCATransitionFromBottom
+
 ```
 
 > You need to set all child views identifiers and make a `UIViewController` array to pass `AAFragmentManager`
@@ -137,15 +139,51 @@ Create a `UIView` and set the class as `AAFragmentManager`. Make an `IBOutlet` o
 
 ##Setup your child views
 
-Now create child views (fragments) using single line
+Get child view controllers with in specific storyboard as follow:
 
 ```swift
-childView.allowSameFragment = true
-childView.setupFragments(arrayVC, defaultIndex: 0)
+let vcs = AAFragmentManager.getViewControllers(withIds: #Array_of_Identifiers#, storyboard: #Storyboard_Name#)
 ```
 
-> Note that `defaultIndex` is for first initial child view that will be automatically added by the `AAFragmentManager`. `defaultIndex` is optional parameter.
+You can init the AAFragmentManager with the array of UIViewController
 
+```swift
+childView.initManager(viewControllers: #Array_of_ViewController#)
+```
+
+You can init the AAFragmentManager with the array of UIViewController providing the parent view controller instance and identifier to call it where ever you like!
+
+```swift
+
+extension AAFragmentManager {
+    static let instance_1 = AAFragmentManagerInstance("SampleIdentifier")
+}
+
+childView.initManager(viewControllers: #Array_of_ViewController#, parentViewController: #Parent_View_Controller#, identifier: #Instance_ID_String#)
+
+```
+
+You can init the AAFragmentManager with the array of AAFragment
+
+```swift
+extension AAFragmentManager {
+    static let id_frag_1 = AAFragment("ChlidVC1", storyboard: "Main")
+    static let id_frag_2 = AAFragment("ChlidVC2", storyboard: "Main")
+}
+
+childView.initManager(fragments: #Array_of_AAFragment#)
+```
+You can init the AAFragmentManager with the array of AAFragment providing the parent view controller instance and identifier to call it where ever you like!
+
+```swift
+
+extension AAFragmentManager {
+    static let instance_1 = AAFragmentManagerInstance("SampleIdentifier")
+}
+
+childView.initManager(fragments: #Array_of_AAFragment#, parentViewController: #Parent_View_Controller#, identifier: #Instance_ID_String#)
+
+```
 
 <div id='section-id-112'/>
 
@@ -154,8 +192,32 @@ childView.setupFragments(arrayVC, defaultIndex: 0)
 You can get any child view controller by accessing it through index
 
 ```swift
-let demoFragment = childView.getFragment(0)
+let demoFragment = childView.getFragment(withIndex: 0) as! Fragment1
 demoFragment.delegate = self // sets for some callback
+```
+
+You can get any child view controller by accessing it through AAFragment
+
+```swift
+
+extension AAFragmentManager {
+    static let id_frag_1 = AAFragment("ChlidVC1", storyboard: "Main")
+}
+
+let demoFragment = childView.getFragment(fragment: #AAFragment#) as! Fragment1
+demoFragment.delegate = self // sets for some callback
+```
+
+You can get the static instance anywhere if required
+
+```swift
+
+extension AAFragmentManager {
+    static let id_frag_1 = AAFragment("ChlidVC1", storyboard: "Main")
+    static let vc_frag_1 = id_frag_1.viewsController as! Fragment1
+}
+
+AAFragmentManager.vc_frag_1.clickAction(self)
 ```
 
 > Note that `getFragment` method can return `nil` if any invalid index passed.
@@ -164,27 +226,41 @@ demoFragment.delegate = self // sets for some callback
 
 ##Switching between child views
 
+You can switch child view controllers with next() and previous() methods safely!
+
+```swift
+// replace with next fragment
+childView.previous()
+// replace with previous fragment
+childView.next()
+```
+
 You can switch child view controllers using the single line
 
 ```swift
 // replace fragment by index
-childView.replaceFragment(index: 1)
-// replace with next fragment
-childView.previousFragment()
-// replace with previous fragment
-childView.nextFragment()
+    childView.replace(withIndex: index)
+
+// replace fragment by AAFragment
+    childView.replace(withfragment: .id_frag_1)
+
 ```
 
-> Note that replaceFragment has optional parameters `shouldAnimate` , `shouldFit`.
-
-Here's the method signature
+Get the instance of any AAFragmentManager with a static method
 
 ```swift
-open func replaceFragment(index: Int, shouldAnimate animate: Bool = true, shouldFit fit: Bool = true)
+
+extension AAFragmentManager {
+    static let instance_1 = AAFragmentManagerInstance("SampleIdentifier")
+}
+
+// Get the instance
+let manager = AAFragmentManager.getInstance(withIdentifier: .instance_1)
+
+// Gets the parent view controller instance
+let parent = manager.parentViewController
+
 ```
-
-> By default, `shouldFit` is true such that it will make fragment of same height as its parent view and vice versa. 
-
 
 <div id='section-id-142'/>
 

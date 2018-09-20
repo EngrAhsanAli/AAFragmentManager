@@ -13,29 +13,42 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var childView: AAFragmentManager!
     
+    var number = 5
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let vcs = AAFragmentManager.getViewControllers(
+            withIds: ["ChlidVC1", "ChlidVC2"],
+            storyboard: "Main")
         
-        let identifiers: [String] = ["ChlidVC1", "ChlidVC2", "ChlidVC3", "ChlidVC4", "ChlidVC5"]
-        let arrayVC = getViewControllers(identifiers)
-        
-        childView.setupFragments(arrayVC, defaultIndex: 0)
 
-        let fragment1 = childView.getFragment(0) as! Fragment1
-        fragment1.parentVC = self
+//        childView.initManager(viewControllers: vcs)
+
+//        childView.initManager(viewControllers: vcs,
+//                              parentViewController: self,
+//                              identifier: .instance_1)
+
+//        childView.initManager(fragments: [.id_frag_1, .id_frag_2])
+        
+        childView.initManager(fragments: [.id_frag_1, .id_frag_2],
+                              parentViewController: self,
+                              identifier: .instance_1)
+        
+        childView.nextTransition = kCATransitionFromTop
+        childView.prevTransition = kCATransitionFromBottom
+
+//        let fragment1 = childView.getFragment(withIndex: 0) as! Fragment1
+//        fragment1.parentVC = self
+        
+//        let frag = childView.getFragment(fragment: .id_frag_1) as! Fragment1
+//        frag.clickAction(self)
+
+//        AAFragmentManager.vc_frag_1.clickAction(self)
+        
         
     }
     
-    func getViewControllers(_ identifiers: [String]) -> [UIViewController] {
-        var viewControllers = [UIViewController]()
-        identifiers.forEach { (id) in
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            viewControllers.append(storyboard.instantiateViewController(withIdentifier: id))
-        }
-        return viewControllers
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,16 +56,40 @@ class ViewController: UIViewController {
 
     @IBAction func replaceViewAction(_ sender: UISegmentedControl) {
         let index = sender.selectedSegmentIndex
-        childView.replaceFragment(withIndex: index)
+        childView.replace(withIndex: index)
+//        childView.replace(withfragment: .id_frag_1)
     }
     
     @IBAction func previousAction(_ sender: Any) {
-        childView.previousFragment()
+        childView.previous()
     }
     
     @IBAction func nextAction(_ sender: Any) {
-        childView.nextFragment()
+        if let manager = AAFragmentManager.getInstance(withIdentifier: .instance_1),
+            let parent = manager.parentViewController as? ViewController {
+            manager.next()
+            parent.calledByParent()
+            
+        }
+        else {
+            childView.next()
+        }
+    }
+    
+    func calledByParent() {
+        print("Called by Parent")
     }
     
 }
 
+extension AAFragmentManager {
+    
+    static let instance_1 = AAFragmentManagerInstance("SampleIdentifier")
+    static let instance_2 = AAFragmentManagerInstance("SampleIdentifier2")
+    
+    static let id_frag_1 = AAFragment("ChlidVC1", storyboard: "Main")
+    static let id_frag_2 = AAFragment("ChlidVC2", storyboard: "Main")
+    
+    static let vc_frag_1 = id_frag_1.viewsController as! Fragment1
+    
+}

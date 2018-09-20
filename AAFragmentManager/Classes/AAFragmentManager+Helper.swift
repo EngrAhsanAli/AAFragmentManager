@@ -6,36 +6,39 @@
 //  Copyright (c) 2017 AA-Creations. All rights reserved.
 //
 
+public typealias AAFragment = AA_Fragment<String, String>
+public typealias AAFragmentManagerInstance = AA_FragmentManagerInstance<String>
 
-
-// MARK: - Helper functions
-extension AAFragmentManager {
- 
-    /// Check if view exists in array
-    ///
-    /// - Parameter index: view index
-    /// - Returns: if view exists
-    func viewExists(_ index: Int) -> Bool {
-        return views?.indices.contains(index) ?? false
+// MARK:- AAFragmentParent
+open class AA_FragmentManagerInstance<S>: AAFragmentManager {
+    open let _id: String
+    
+    public init(_ identifier: String) {
+        self._id = identifier
+        super.init(frame: .zero)
     }
     
-    /// Empty current view
-    func removeSubviews() {
-        subviews.forEach({$0.removeFromSuperview()})
-    }
-    
-    /// Get specific fragment by index
-    ///
-    /// - Parameter index: fragment index
-    /// - Returns: fragment view controller
-    open func getFragment(_ index: Int) -> UIViewController? {
-        if viewExists(index) {
-            return views![index]
-        }
-        return nil
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }
 
+// MARK:- AAFragment
+open class AA_Fragment<V, S>: AAFragmentManager {
+    open var viewsController: UIViewController
+    
+    public init(_ withId: String, storyboard: String) {
 
-
+        self.viewsController =
+            UIStoryboard(name: storyboard, bundle: nil)
+            .instantiateViewController(withIdentifier: withId)
+        
+        super.init(frame: .zero)
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}

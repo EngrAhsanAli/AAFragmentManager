@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AAFragmentManager
 
 class Fragment1: UIViewController {
 
@@ -31,6 +32,7 @@ class Fragment1: UIViewController {
         alert.addAction(UIAlertAction(title: "I Got it!", style: .default, handler: nil))
         parentVC?.present(alert, animated: true, completion: nil)
         
+//        AAFragmentManager.instance_1.parentViewController
         
     }
 

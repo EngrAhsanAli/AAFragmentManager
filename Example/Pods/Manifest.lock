@@ -1,16 +1,16 @@
 PODS:
-  - AAFragmentManager (0.1.0)
+  - AAFragmentManager (2.0)
 
 DEPENDENCIES:
   - AAFragmentManager (from `../`)
 
 EXTERNAL SOURCES:
   AAFragmentManager:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  AAFragmentManager: fbf9eb5d4921a771faf22aa3a2becde84d22ce8c
+  AAFragmentManager: c4799d71e274275550a485478b9ea905c1b35772
 
-PODFILE CHECKSUM: c5034de4ba855c659dd2dd8265908a8303753503
+PODFILE CHECKSUM: ab3b96c764b6d71bb9cb1c3d313075fa3dd07fee
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.5.3
