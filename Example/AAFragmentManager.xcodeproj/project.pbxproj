@@ -35,7 +35,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8296E5DFDD8FC82AEFB4F82D /* Pods-AAFragmentManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AAFragmentManager_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AAFragmentManager_Example/Pods-AAFragmentManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		884DA0EF28CBEF6780947815 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		EF9AEC16658D38A54DCB7B37 /* AAFragmentManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AAFragmentManager.podspec; path = ../AAFragmentManager.podspec; sourceTree = "<group>"; };
+		EF9AEC16658D38A54DCB7B37 /* AAFragmentManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AAFragmentManager.podspec; path = ../AAFragmentManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
