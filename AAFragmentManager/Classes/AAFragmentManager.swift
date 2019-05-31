@@ -15,17 +15,17 @@ open class AAFragmentManager: UIView {
     open lazy var transition: CATransition = {
         let transition = CATransition()
         transition.duration = 0.3
-        transition.type = kCATransitionReveal
-        transition.subtype = kCATransitionReveal
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = CATransitionType.reveal
+        transition.subtype = CATransitionSubtype(rawValue: CATransitionType.reveal.rawValue)
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         return transition
     }()
     
     /// Fragment previous transition
-    open var prevTransition: String = kCATransitionFromLeft
+    open var prevTransition: String = convertFromCATransitionSubtype(.fromLeft)
     
     /// Fragment next transition
-    open var nextTransition: String = kCATransitionFromRight
+    open var nextTransition: String = convertFromCATransitionSubtype(.fromRight)
     
     /// Parent View Controller
     open var parentViewController: UIViewController?
@@ -189,7 +189,7 @@ extension AAFragmentManager {
         guard let view = viewControllers[optional: index]?.view else { return }
         
         if nextPrevTransition {
-            self.transition.subtype = selectedIndex > index ? prevTransition : nextTransition
+            self.transition.subtype = convertToOptionalCATransitionSubtype(selectedIndex > index ? prevTransition : nextTransition)
         }
         
         selectedIndex = index
@@ -229,4 +229,15 @@ extension AAFragmentManager {
         AAFragmentManager.identifier = withIdentifier._id
         return AAFragmentManager.instance
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCATransitionSubtype(_ input: CATransitionSubtype) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalCATransitionSubtype(_ input: String?) -> CATransitionSubtype? {
+	guard let input = input else { return nil }
+	return CATransitionSubtype(rawValue: input)
 }

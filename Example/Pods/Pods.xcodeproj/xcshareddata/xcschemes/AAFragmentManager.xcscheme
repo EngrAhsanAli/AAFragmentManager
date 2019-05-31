@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "619822BF85CB5CFFA9747FAC901EFB50"
+               BlueprintIdentifier = "22E2DF87F38EAC6BBE408BE340931702"
                BuildableName = "AAFragmentManager.framework"
                BlueprintName = "AAFragmentManager"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "619822BF85CB5CFFA9747FAC901EFB50"
+            BlueprintIdentifier = "22E2DF87F38EAC6BBE408BE340931702"
             BuildableName = "AAFragmentManager.framework"
             BlueprintName = "AAFragmentManager"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "619822BF85CB5CFFA9747FAC901EFB50"
+            BlueprintIdentifier = "22E2DF87F38EAC6BBE408BE340931702"
             BuildableName = "AAFragmentManager.framework"
             BlueprintName = "AAFragmentManager"
             ReferencedContainer = "container:Pods.xcodeproj">

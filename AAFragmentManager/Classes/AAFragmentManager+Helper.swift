@@ -11,7 +11,7 @@ public typealias AAFragmentManagerInstance = AA_FragmentManagerInstance<String>
 
 // MARK:- AAFragmentParent
 open class AA_FragmentManagerInstance<S>: AAFragmentManager {
-    open let _id: String
+    public let _id: String
     
     public init(_ identifier: String) {
         self._id = identifier

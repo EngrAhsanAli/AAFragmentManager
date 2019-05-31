@@ -27,7 +27,7 @@ extension UIView {
             return
         }
         
-        let applyInset: (NSLayoutAttribute, UIEdgeInsets) -> CGFloat = {
+        let applyInset: (NSLayoutConstraint.Attribute, UIEdgeInsets) -> CGFloat = {
             switch $0 {
             case .top: return $1.top
             case .bottom: return -$1.bottom
@@ -39,7 +39,7 @@ extension UIView {
         }
         
         translatesAutoresizingMaskIntoConstraints = false
-        let attributes = [NSLayoutAttribute.top, .left, .right, .bottom]
+        let attributes = [NSLayoutConstraint.Attribute.top, .left, .right, .bottom]
         superview.addConstraints(attributes.map {
             return NSLayoutConstraint(item: self,
                                       attribute: $0,
