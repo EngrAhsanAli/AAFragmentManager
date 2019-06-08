@@ -38,11 +38,11 @@ class ViewController: UIViewController {
         childView.nextTransition = kCATransitionFromTop
         childView.prevTransition = kCATransitionFromBottom
 
-//        let fragment1 = childView.getFragment(withIndex: 0) as! Fragment1
-//        fragment1.parentVC = self
+        let fragment1 = childView.getFragment(withIndex: 0) as! Fragment1
+        fragment1.parentVC = self
         
-//        let frag = childView.getFragment(fragment: .id_frag_1) as! Fragment1
-//        frag.clickAction(self)
+        let frag = childView.getFragment(fragment: .id_frag_1) as! Fragment1
+        frag.clickAction(self)
 
 //        AAFragmentManager.vc_frag_1.clickAction(self)
         

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'AAFragmentManager'
-s.version          = '2.0'
+s.version          = '2.1'
 s.summary          = 'AAFragmentManager is a child view manager responsible to add child subviews in UIView and easy switching between them, written in Swift.'
 
 s.description      = <<-DESC
@@ -15,7 +15,7 @@ s.author           = { 'Engr. Ahsan Ali' => 'hafiz.m.ahsan.ali@gmail.com' }
 s.source           = { :git => 'https://github.com/EngrAhsanAli/AAFragmentManager.git', :tag => s.version.to_s }
 
 s.ios.deployment_target = '8.0'
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 
 s.source_files = 'AAFragmentManager/Classes/**/*'
 
