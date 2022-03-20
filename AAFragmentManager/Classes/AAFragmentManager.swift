@@ -31,7 +31,7 @@ open class AAFragmentManager: UIView {
     open var parentViewController: UIViewController?
     
     /// Selected Fragment Index
-    var selectedIndex: Int = 0
+    open var selectedIndex: Int = 0
 
     /// View Controllers
     var viewControllers = [UIViewController]()
